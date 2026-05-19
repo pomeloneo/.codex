@@ -9,6 +9,7 @@ Tracked:
 - `agents/`
 - `agent-instructions/`
 - `prompts/`
+- `scripts/`
 - `skills/`
 - `version.json`
 
@@ -25,3 +26,23 @@ Intentionally excluded:
 
 Before adding new tracked paths, check that they do not contain credentials,
 conversation history, local machine state, or proprietary project data.
+
+## Auto Sync
+
+This repo can be auto-synced with GitHub through a local launchd agent.
+
+Install or refresh the agent:
+
+```bash
+scripts/install-auto-sync-launchd.sh
+```
+
+The agent runs `scripts/auto-sync.sh` when tracked configuration paths change.
+The script:
+
+- stages only the explicit tracked paths listed in the script
+- refuses known sensitive/runtime paths
+- scans staged content for common token and private-key patterns
+- commits and pushes to `origin/main`
+
+Logs are written to `log/auto-sync-git.log` and are intentionally ignored.
