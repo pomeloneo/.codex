@@ -6,6 +6,7 @@ LABEL="${CODEX_AUTO_SYNC_LABEL:-com.pomeloneo.codex-auto-sync}"
 PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
 SCRIPT="$REPO_DIR/scripts/auto-sync.sh"
 UID_VALUE="$(id -u)"
+INTERVAL_SECONDS="${CODEX_AUTO_SYNC_INTERVAL_SECONDS:-300}"
 
 xml_escape() {
   printf '%s' "$1" |
@@ -41,6 +42,9 @@ cat > "$PLIST" <<PLIST
 
   <key>RunAtLoad</key>
   <true/>
+
+  <key>StartInterval</key>
+  <integer>$INTERVAL_SECONDS</integer>
 
   <key>WatchPaths</key>
   <array>
