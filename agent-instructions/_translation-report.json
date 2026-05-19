@@ -1,0 +1,889 @@
+[
+  {
+    "name": "a11y-architect",
+    "source": "/Users/bytedance/.claude/agents/a11y-architect.md",
+    "target": "/Users/bytedance/.codex/agents/a11y-architect.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/a11y-architect.md",
+    "sourceModel": "opus",
+    "model": "gpt-5.4",
+    "reasoning": "high",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [
+      "model"
+    ],
+    "status": "written"
+  },
+  {
+    "name": "architect",
+    "source": "/Users/bytedance/.claude/agents/architect.md",
+    "target": "/Users/bytedance/.codex/agents/architect.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/architect.md",
+    "sourceModel": "opus",
+    "model": "gpt-5.4",
+    "reasoning": "high",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "build-error-resolver",
+    "source": "/Users/bytedance/.claude/agents/build-error-resolver.md",
+    "target": "/Users/bytedance/.codex/agents/build-error-resolver.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/build-error-resolver.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "chief-of-staff",
+    "source": "/Users/bytedance/.claude/agents/chief-of-staff.md",
+    "target": "/Users/bytedance/.codex/agents/chief-of-staff.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/chief-of-staff.md",
+    "sourceModel": "opus",
+    "model": "gpt-5.4",
+    "reasoning": "high",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash",
+      "Edit",
+      "Write"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "code-architect",
+    "source": "/Users/bytedance/.claude/agents/code-architect.md",
+    "target": "/Users/bytedance/.codex/agents/code-architect.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/code-architect.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "code-explorer",
+    "source": "/Users/bytedance/.claude/agents/code-explorer.md",
+    "target": "/Users/bytedance/.codex/agents/code-explorer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/code-explorer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "code-reviewer",
+    "source": "/Users/bytedance/.claude/agents/code-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/code-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/code-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "comment-analyzer",
+    "source": "/Users/bytedance/.claude/agents/comment-analyzer.md",
+    "target": "/Users/bytedance/.codex/agents/comment-analyzer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/comment-analyzer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "conversation-analyzer",
+    "source": "/Users/bytedance/.claude/agents/conversation-analyzer.md",
+    "target": "/Users/bytedance/.codex/agents/conversation-analyzer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/conversation-analyzer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "cpp-build-resolver",
+    "source": "/Users/bytedance/.claude/agents/cpp-build-resolver.md",
+    "target": "/Users/bytedance/.codex/agents/cpp-build-resolver.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/cpp-build-resolver.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "cpp-reviewer",
+    "source": "/Users/bytedance/.claude/agents/cpp-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/cpp-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/cpp-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "csharp-reviewer",
+    "source": "/Users/bytedance/.claude/agents/csharp-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/csharp-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/csharp-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "dart-build-resolver",
+    "source": "/Users/bytedance/.claude/agents/dart-build-resolver.md",
+    "target": "/Users/bytedance/.codex/agents/dart-build-resolver.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/dart-build-resolver.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "database-reviewer",
+    "source": "/Users/bytedance/.claude/agents/database-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/database-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/database-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "doc-updater",
+    "source": "/Users/bytedance/.claude/agents/doc-updater.md",
+    "target": "/Users/bytedance/.codex/agents/doc-updater.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/doc-updater.md",
+    "sourceModel": "haiku",
+    "model": "gpt-5.4-mini",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "docs-lookup",
+    "source": "/Users/bytedance/.claude/agents/docs-lookup.md",
+    "target": "/Users/bytedance/.codex/agents/docs-lookup.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/docs-lookup.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "e2e-runner",
+    "source": "/Users/bytedance/.claude/agents/e2e-runner.md",
+    "target": "/Users/bytedance/.codex/agents/e2e-runner.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/e2e-runner.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "flutter-reviewer",
+    "source": "/Users/bytedance/.claude/agents/flutter-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/flutter-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/flutter-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "gan-evaluator",
+    "source": "/Users/bytedance/.claude/agents/gan-evaluator.md",
+    "target": "/Users/bytedance/.codex/agents/gan-evaluator.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/gan-evaluator.md",
+    "sourceModel": "opus",
+    "model": "gpt-5.4",
+    "reasoning": "high",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Write",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "gan-generator",
+    "source": "/Users/bytedance/.claude/agents/gan-generator.md",
+    "target": "/Users/bytedance/.codex/agents/gan-generator.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/gan-generator.md",
+    "sourceModel": "opus",
+    "model": "gpt-5.4",
+    "reasoning": "high",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "gan-planner",
+    "source": "/Users/bytedance/.claude/agents/gan-planner.md",
+    "target": "/Users/bytedance/.codex/agents/gan-planner.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/gan-planner.md",
+    "sourceModel": "opus",
+    "model": "gpt-5.4",
+    "reasoning": "high",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Write",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "go-build-resolver",
+    "source": "/Users/bytedance/.claude/agents/go-build-resolver.md",
+    "target": "/Users/bytedance/.codex/agents/go-build-resolver.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/go-build-resolver.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "go-reviewer",
+    "source": "/Users/bytedance/.claude/agents/go-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/go-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/go-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "harness-optimizer",
+    "source": "/Users/bytedance/.claude/agents/harness-optimizer.md",
+    "target": "/Users/bytedance/.codex/agents/harness-optimizer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/harness-optimizer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash",
+      "Edit"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "healthcare-reviewer",
+    "source": "/Users/bytedance/.claude/agents/healthcare-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/healthcare-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/healthcare-reviewer.md",
+    "sourceModel": "opus",
+    "model": "gpt-5.4",
+    "reasoning": "high",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "java-build-resolver",
+    "source": "/Users/bytedance/.claude/agents/java-build-resolver.md",
+    "target": "/Users/bytedance/.codex/agents/java-build-resolver.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/java-build-resolver.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "java-reviewer",
+    "source": "/Users/bytedance/.claude/agents/java-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/java-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/java-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "kotlin-build-resolver",
+    "source": "/Users/bytedance/.claude/agents/kotlin-build-resolver.md",
+    "target": "/Users/bytedance/.codex/agents/kotlin-build-resolver.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/kotlin-build-resolver.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "kotlin-reviewer",
+    "source": "/Users/bytedance/.claude/agents/kotlin-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/kotlin-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/kotlin-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "loop-operator",
+    "source": "/Users/bytedance/.claude/agents/loop-operator.md",
+    "target": "/Users/bytedance/.codex/agents/loop-operator.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/loop-operator.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash",
+      "Edit"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "opensource-forker",
+    "source": "/Users/bytedance/.claude/agents/opensource-forker.md",
+    "target": "/Users/bytedance/.codex/agents/opensource-forker.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/opensource-forker.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "opensource-packager",
+    "source": "/Users/bytedance/.claude/agents/opensource-packager.md",
+    "target": "/Users/bytedance/.codex/agents/opensource-packager.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/opensource-packager.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "opensource-sanitizer",
+    "source": "/Users/bytedance/.claude/agents/opensource-sanitizer.md",
+    "target": "/Users/bytedance/.codex/agents/opensource-sanitizer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/opensource-sanitizer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "performance-optimizer",
+    "source": "/Users/bytedance/.claude/agents/performance-optimizer.md",
+    "target": "/Users/bytedance/.codex/agents/performance-optimizer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/performance-optimizer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "planner",
+    "source": "/Users/bytedance/.claude/agents/planner.md",
+    "target": "/Users/bytedance/.codex/agents/planner.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/planner.md",
+    "sourceModel": "opus",
+    "model": "gpt-5.4",
+    "reasoning": "high",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "pr-test-analyzer",
+    "source": "/Users/bytedance/.claude/agents/pr-test-analyzer.md",
+    "target": "/Users/bytedance/.codex/agents/pr-test-analyzer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/pr-test-analyzer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "python-reviewer",
+    "source": "/Users/bytedance/.claude/agents/python-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/python-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/python-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "pytorch-build-resolver",
+    "source": "/Users/bytedance/.claude/agents/pytorch-build-resolver.md",
+    "target": "/Users/bytedance/.codex/agents/pytorch-build-resolver.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/pytorch-build-resolver.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "refactor-cleaner",
+    "source": "/Users/bytedance/.claude/agents/refactor-cleaner.md",
+    "target": "/Users/bytedance/.codex/agents/refactor-cleaner.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/refactor-cleaner.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "rust-build-resolver",
+    "source": "/Users/bytedance/.claude/agents/rust-build-resolver.md",
+    "target": "/Users/bytedance/.codex/agents/rust-build-resolver.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/rust-build-resolver.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "rust-reviewer",
+    "source": "/Users/bytedance/.claude/agents/rust-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/rust-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/rust-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "security-reviewer",
+    "source": "/Users/bytedance/.claude/agents/security-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/security-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/security-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "seo-specialist",
+    "source": "/Users/bytedance/.claude/agents/seo-specialist.md",
+    "target": "/Users/bytedance/.codex/agents/seo-specialist.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/seo-specialist.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "silent-failure-hunter",
+    "source": "/Users/bytedance/.claude/agents/silent-failure-hunter.md",
+    "target": "/Users/bytedance/.codex/agents/silent-failure-hunter.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/silent-failure-hunter.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "tdd-guide",
+    "source": "/Users/bytedance/.claude/agents/tdd-guide.md",
+    "target": "/Users/bytedance/.codex/agents/tdd-guide.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/tdd-guide.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "workspace-write",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "type-design-analyzer",
+    "source": "/Users/bytedance/.claude/agents/type-design-analyzer.md",
+    "target": "/Users/bytedance/.codex/agents/type-design-analyzer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/type-design-analyzer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  },
+  {
+    "name": "typescript-reviewer",
+    "source": "/Users/bytedance/.claude/agents/typescript-reviewer.md",
+    "target": "/Users/bytedance/.codex/agents/typescript-reviewer.toml",
+    "instructions": "/Users/bytedance/.codex/agent-instructions/typescript-reviewer.md",
+    "sourceModel": "sonnet",
+    "model": "gpt-5.4",
+    "reasoning": "medium",
+    "sandboxMode": "read-only",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "duplicateKeys": [],
+    "status": "written"
+  }
+]
