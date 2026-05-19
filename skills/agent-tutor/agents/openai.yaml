@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Tutor"
+  short_description: "Chapter-by-chapter Agent development tutoring"
+  default_prompt: "Use $agent-tutor to teach me a Hello-Agents chapter and walk through the exercises."
