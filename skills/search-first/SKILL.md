@@ -63,23 +63,21 @@ Before writing a utility or adding functionality, mentally run through:
 
 0. Does this already exist in the repo? → `rg` through relevant modules/tests first
 1. Is this a common problem? → Search npm/PyPI
-2. Is there an MCP for this? → Check `~/.claude/settings.json` and search
-3. Is there a skill for this? → Check `~/.claude/skills/`
+2. Is there an MCP for this? → Check `~/.codex/config.toml` and search
+3. Is there a skill for this? → Check `~/.codex/skills/`
 4. Is there a GitHub implementation/template? → Run GitHub code search for maintained OSS before writing net-new code
 
 ### Full Mode (agent)
 
-For non-trivial functionality, launch the researcher agent:
+For non-trivial functionality, use an available researcher subagent or do the same search loop in the current session:
 
 ```
-Task(subagent_type="general-purpose", prompt="
-  Research existing tools for: [DESCRIPTION]
-  Language/framework: [LANG]
-  Constraints: [ANY]
+Research existing tools for: [DESCRIPTION]
+Language/framework: [LANG]
+Constraints: [ANY]
 
-  Search: npm/PyPI, MCP servers, Claude Code skills, GitHub
-  Return: Structured comparison with recommendation
-")
+Search: npm/PyPI, MCP servers, Codex skills, GitHub
+Return: Structured comparison with recommendation
 ```
 
 ## Search Shortcuts by Category
@@ -91,7 +89,7 @@ Task(subagent_type="general-purpose", prompt="
 - Pre-commit → `husky`, `lint-staged`, `pre-commit`
 
 ### AI/LLM Integration
-- Claude SDK → Context7 for latest docs
+- OpenAI/Anthropic SDKs → Context7 or official docs for latest APIs
 - Prompt management → Check MCP servers
 - Document processing → `unstructured`, `pdfplumber`, `mammoth`
 

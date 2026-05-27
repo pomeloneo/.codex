@@ -22,7 +22,7 @@ At least one of:
 - **firecrawl** — `firecrawl_search`, `firecrawl_scrape`, `firecrawl_crawl`
 - **exa** — `web_search_exa`, `web_search_advanced_exa`, `crawling_exa`
 
-Both together give the best coverage. Configure in `~/.claude.json` or `~/.codex/config.toml`.
+Both together give the best coverage. Configure MCP servers in `~/.codex/config.toml` or the active MCP client configuration.
 
 ## Workflow
 
@@ -124,10 +124,10 @@ Sub-questions investigated: [list]
 
 ## Parallel Research with Subagents
 
-For broad topics, use Claude Code's Task tool to parallelize:
+For broad topics, use available subagent or multi-agent tooling to parallelize:
 
 ```
-Launch 3 research agents in parallel:
+Launch 3 research agents in parallel if the environment supports it:
 1. Agent 1: Research sub-questions 1-2
 2. Agent 2: Research sub-questions 3-4
 3. Agent 3: Research sub-question 5 + cross-cutting themes

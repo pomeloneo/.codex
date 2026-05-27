@@ -20,10 +20,41 @@ Use when: implementing a new MCP server, adding tools or resources, choosing std
 
 - **Tools**: Actions the model can invoke (e.g. search, run a command). Register with `registerTool()` or `tool()` depending on SDK version.
 - **Resources**: Read-only data the model can fetch (e.g. file contents, API responses). Register with `registerResource()` or `resource()`. Handlers typically receive a `uri` argument.
-- **Prompts**: Reusable, parameterised prompt templates the client can surface (e.g. in Claude Desktop). Register with `registerPrompt()` or equivalent.
-- **Transport**: stdio for local clients (e.g. Claude Desktop); Streamable HTTP is preferred for remote (Cursor, cloud). Legacy HTTP/SSE is for backward compatibility.
+- **Prompts**: Reusable, parameterised prompt templates the client can surface in an MCP-capable assistant. Register with `registerPrompt()` or equivalent.
+- **Transport**: stdio for local clients; Streamable HTTP is preferred for remote or hosted clients. Legacy HTTP/SSE is for backward compatibility.
 
 The Node/TypeScript SDK may expose `tool()` / `resource()` or `registerTool()` / `registerResource()`; the official SDK has changed over time. Always verify against the current [MCP docs](https://modelcontextprotocol.io) or Context7.
+
+### Agent-Centric Tool Design
+
+Do not wrap every upstream API endpoint one-for-one. Build tools around workflows an agent actually needs to complete:
+
+- Prefer complete workflow tools over tiny endpoint wrappers when the workflow is common
+- Return high-signal, concise data by default; offer a detailed mode when needed
+- Use human-readable identifiers where possible, and expose stable IDs only when necessary
+- Make error messages actionable: explain what went wrong and what parameter or next step can fix it
+- Group related tools with consistent prefixes so discovery is predictable
+- Mark destructive, idempotent, read-only, and open-world behavior with tool annotations where the SDK supports them
+
+### Python and FastMCP
+
+For Python servers, FastMCP is often the quickest path. Verify current APIs against official docs before coding, then keep the same design standards:
+
+- Use Pydantic models or SDK-supported schemas for inputs
+- Type all parameters and return values
+- Keep transport setup separate from tool logic
+- Use async I/O for network calls
+- Put API auth, pagination, retries, and response formatting in shared helpers
+
+### Evaluation-Driven MCP Development
+
+Before considering an MCP server done, create realistic evaluation questions:
+
+- 10 read-only questions that require real tool use
+- Questions should be independent, stable, and verifiable
+- Include multi-step workflows, not only single-tool calls
+- Record the expected answer and the minimal evidence path
+- Use failed evaluations to improve tool names, descriptions, return shapes, and errors
 
 ### Connecting with stdio
 

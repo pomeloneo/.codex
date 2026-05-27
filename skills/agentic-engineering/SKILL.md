@@ -1,6 +1,6 @@
 ---
 name: agentic-engineering
-description: Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing.
+description: Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware execution routing.
 origin: ECC
 ---
 
@@ -12,7 +12,7 @@ Use this skill for engineering workflows where AI agents perform most implementa
 
 1. Define completion criteria before execution.
 2. Decompose work into agent-sized units.
-3. Route model tiers by task complexity.
+3. Route execution effort by task complexity.
 4. Measure with evals and regression checks.
 
 ## Eval-First Loop
@@ -29,11 +29,11 @@ Apply the 15-minute unit rule:
 - each unit should have a single dominant risk
 - each unit should expose a clear done condition
 
-## Model Routing
+## Execution Routing
 
-- Haiku: classification, boilerplate transforms, narrow edits
-- Sonnet: implementation and refactors
-- Opus: architecture, root-cause analysis, multi-file invariants
+- Low-effort direct work: classification, boilerplate transforms, narrow edits
+- Standard Codex work: implementation, refactors, focused debugging
+- High-reasoning or multi-agent work: architecture, root-cause analysis, multi-file invariants, independent validation
 
 ## Session Strategy
 
@@ -54,10 +54,10 @@ Do not waste review cycles on style-only disagreements when automated format/lin
 ## Cost Discipline
 
 Track per task:
-- model
+- execution mode
 - token estimate
 - retries
 - wall-clock time
 - success/failure
 
-Escalate model tier only when lower tier fails with a clear reasoning gap.
+Escalate effort only when the current mode fails with a clear reasoning gap or validation gap.

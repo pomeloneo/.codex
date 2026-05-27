@@ -10,7 +10,7 @@ Testing patterns specifically designed for AI-assisted development, where the sa
 
 ## When to Activate
 
-- AI agent (Claude Code, Cursor, Codex) has modified API routes or backend logic
+- Codex or another AI coding agent has modified API routes or backend logic
 - A bug was found and fixed — need to prevent re-introduction
 - Project has a sandbox/mock mode that can be leveraged for DB-free testing
 - Running `/bug-check` or similar review commands after code changes
@@ -197,7 +197,7 @@ describe("GET /api/user/messages (conversation list)", () => {
 ### Custom Command Definition
 
 ```markdown
-<!-- .claude/commands/bug-check.md -->
+<!-- ~/.codex/prompts/bug-check.md, optional legacy prompt command -->
 # Bug Check
 
 ## Step 1: Automated Tests (mandatory, cannot skip)

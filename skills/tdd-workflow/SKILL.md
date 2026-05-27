@@ -21,13 +21,31 @@ This skill ensures all code development follows TDD principles with comprehensiv
 ### 1. Tests BEFORE Code
 ALWAYS write tests first, then implement code to make tests pass.
 
-### 2. Coverage Requirements
+### 2. Behavior Through Public Interfaces
+Prefer tests that verify observable behavior through public interfaces:
+- Test what the system does, not how it is internally structured
+- Avoid private methods, internal call order, and implementation-only assertions
+- Mock only external boundaries or genuinely expensive/unstable dependencies
+- A good test should survive an internal refactor when behavior is unchanged
+
+### 3. Vertical Slices, Not Horizontal Slices
+Do not write all tests first and all implementation later. Use tracer bullets:
+
+```
+RED -> GREEN: one behavior test -> minimal implementation
+RED -> GREEN: next behavior test -> minimal implementation
+RED -> GREEN: next behavior test -> minimal implementation
+```
+
+Each cycle should teach you something about the interface and implementation. Do not outrun your understanding by locking in a large imagined test suite before the first implementation path works.
+
+### 4. Coverage Requirements
 - Minimum 80% coverage (unit + integration + E2E)
 - All edge cases covered
 - Error scenarios tested
 - Boundary conditions verified
 
-### 3. Test Types
+### 5. Test Types
 
 #### Unit Tests
 - Individual functions and utilities
@@ -47,7 +65,7 @@ ALWAYS write tests first, then implement code to make tests pass.
 - Browser automation
 - UI interactions
 
-### 4. Git Checkpoints
+### 6. Git Checkpoints
 - If the repository is under Git, create a checkpoint commit after each TDD stage
 - Do not squash or rewrite these checkpoint commits until the workflow is complete
 - Each checkpoint commit message must describe the stage and the exact evidence captured
@@ -72,7 +90,7 @@ so that I can find relevant markets even without exact keywords.
 ```
 
 ### Step 2: Generate Test Cases
-For each user journey, create comprehensive test cases:
+For each user journey, create behavior-focused test cases. Prefer one high-value behavior at a time; do not bulk-write speculative tests before the first RED -> GREEN path is proven.
 
 ```typescript
 describe('Semantic Search', () => {
@@ -170,6 +188,16 @@ npm run test:coverage
 ```
 
 ## Testing Patterns
+
+### Per-Cycle Checklist
+
+Before moving to the next TDD cycle, verify:
+- The test describes behavior, not implementation details
+- The test uses a public interface or user-facing entry point
+- The code added is minimal for the current test
+- No speculative features were added for future tests
+- The test would still make sense after an internal refactor
+- Mocking is limited to external boundaries, expensive services, or non-deterministic dependencies
 
 ### Unit Test Pattern (Jest/Vitest)
 ```typescript

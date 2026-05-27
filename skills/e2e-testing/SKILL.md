@@ -8,6 +8,55 @@ origin: ECC
 
 Comprehensive Playwright patterns for building stable, fast, and maintainable E2E test suites.
 
+## Local App Server Lifecycle
+
+For local web app testing, prefer one of these server-management approaches:
+
+1. Use Playwright `webServer` in `playwright.config.ts` when the suite owns the server lifecycle.
+2. Use the bundled helper when writing ad-hoc automation around one or more local servers:
+
+```bash
+python ~/.codex/skills/e2e-testing/scripts/with_server.py --help
+
+python ~/.codex/skills/e2e-testing/scripts/with_server.py \
+  --server "npm run dev" --port 5173 \
+  -- python your_automation.py
+```
+
+For multi-service apps:
+
+```bash
+python ~/.codex/skills/e2e-testing/scripts/with_server.py \
+  --server "cd backend && python server.py" --port 3000 \
+  --server "cd frontend && npm run dev" --port 5173 \
+  -- python your_automation.py
+```
+
+Treat bundled helper scripts as black boxes first: run `--help`, use them directly, and read/modify the source only if the helper cannot support the task.
+
+## Reconnaissance Before Actions
+
+For dynamic local apps, do not guess selectors from source alone:
+
+1. Start or attach to the local server
+2. Navigate and wait for `networkidle`
+3. Capture screenshot, console logs, and rendered DOM
+4. Identify stable selectors from rendered state
+5. Execute interactions using discovered selectors
+
+```python
+from playwright.sync_api import sync_playwright
+
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=True)
+    page = browser.new_page()
+    page.goto("http://localhost:5173")
+    page.wait_for_load_state("networkidle")
+    page.screenshot(path="/tmp/inspect.png", full_page=True)
+    print(page.content())
+    browser.close()
+```
+
 ## Test File Organization
 
 ```

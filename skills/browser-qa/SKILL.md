@@ -16,7 +16,18 @@ origin: ECC
 
 ## How It Works
 
-Uses the browser automation MCP (claude-in-chrome, Playwright, or Puppeteer) to interact with live pages like a real user.
+Uses Codex Browser/Chrome automation, Playwright, Puppeteer, or an equivalent browser MCP to interact with live pages like a real user.
+
+## Local App Reconnaissance
+
+For local web apps, first make sure the app is actually running and hydrated:
+
+1. If the server is not running, use the project dev command, Playwright `webServer`, or `~/.codex/skills/e2e-testing/scripts/with_server.py`
+2. Navigate to the URL and wait for the rendered app, not just the initial HTML
+3. Capture screenshot, console errors, network failures, and rendered DOM before deciding selectors
+4. Execute actions only after selectors are confirmed from the rendered state
+
+This avoids false QA failures caused by inspecting a pre-hydration DOM or a server that was never ready.
 
 ### Phase 1: Smoke Test
 ```
@@ -79,9 +90,9 @@ Uses the browser automation MCP (claude-in-chrome, Playwright, or Puppeteer) to 
 
 ## Integration
 
-Works with any browser MCP:
-- `mChild__claude-in-chrome__*` tools (preferred — uses your actual Chrome)
-- Playwright via `mcp__browserbase__*`
-- Direct Puppeteer scripts
+Works with any browser automation surface:
+- Codex Browser plugin or Chrome connector tools (preferred when available — uses a real browser session)
+- Playwright via an MCP such as Browserbase
+- Direct Playwright or Puppeteer scripts
 
 Pair with `/canary-watch` for post-deploy monitoring.

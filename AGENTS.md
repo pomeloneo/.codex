@@ -10,6 +10,10 @@ Adapted from `/Users/bytedance/.claude/AGENTS.md` for Codex on 2026-04-23.
 - Use `~/.codex/prompts/*.md` only for explicit legacy slash commands. Prefer skills for reusable instructions.
 - Use the `claude-rulebook` skill when migrated Claude coding standards are relevant.
 
+## Response Quality
+
+- Use the `readable-response` skill as the default presentation pass for user-facing prose.
+
 ## Maintenance Rules
 
 - Prefer one canonical surface for each workflow.

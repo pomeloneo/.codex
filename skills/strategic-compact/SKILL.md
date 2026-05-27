@@ -36,9 +36,9 @@ The `suggest-compact.js` script runs on PreToolUse (Edit/Write) and:
 2. **Threshold detection** — Suggests at configurable threshold (default: 50 calls)
 3. **Periodic reminders** — Reminds every 25 calls after threshold
 
-## Hook Setup
+## Optional Hook Setup
 
-Add to your `~/.claude/settings.json`:
+If your Codex environment supports equivalent hooks, adapt this pattern to the active Codex configuration. Otherwise, use the decision guide below as a manual checkpoint.
 
 ```json
 {
@@ -46,11 +46,11 @@ Add to your `~/.claude/settings.json`:
     "PreToolUse": [
       {
         "matcher": "Edit",
-        "hooks": [{ "type": "command", "command": "node ~/.claude/skills/strategic-compact/suggest-compact.js" }]
+        "hooks": [{ "type": "command", "command": "node ~/.codex/skills/strategic-compact/suggest-compact.js" }]
       },
       {
         "matcher": "Write",
-        "hooks": [{ "type": "command", "command": "node ~/.claude/skills/strategic-compact/suggest-compact.js" }]
+        "hooks": [{ "type": "command", "command": "node ~/.codex/skills/strategic-compact/suggest-compact.js" }]
       }
     ]
   }
@@ -69,7 +69,7 @@ Use this table to decide when to compact:
 | Phase Transition | Compact? | Why |
 |-----------------|----------|-----|
 | Research → Planning | Yes | Research context is bulky; plan is the distilled output |
-| Planning → Implementation | Yes | Plan is in TodoWrite or a file; free up context for code |
+| Planning → Implementation | Yes | Plan is in the current plan or a file; free up context for code |
 | Implementation → Testing | Maybe | Keep if tests reference recent code; compact if switching focus |
 | Debugging → Next feature | Yes | Debug traces pollute context for unrelated work |
 | Mid-implementation | No | Losing variable names, file paths, and partial state is costly |
@@ -81,15 +81,31 @@ Understanding what persists helps you compact with confidence:
 
 | Persists | Lost |
 |----------|------|
-| CLAUDE.md instructions | Intermediate reasoning and analysis |
-| TodoWrite task list | File contents you previously read |
-| Memory files (`~/.claude/memory/`) | Multi-step conversation context |
+| AGENTS.md instructions | Intermediate reasoning and analysis |
+| Current plan or plan file | File contents you previously read |
+| Persisted project notes | Multi-step conversation context |
 | Git state (commits, branches) | Tool call history and counts |
 | Files on disk | Nuanced user preferences stated verbally |
 
+## Handoff Note Template
+
+When a task must continue in another session, write a concise handoff note before compacting or stopping. Save it outside the current workspace unless the user asks for a project artifact.
+
+Include:
+
+- Objective and current status
+- Important decisions already made
+- Files changed and commands already run
+- Validation completed and validation still missing
+- Known risks, blockers, and assumptions
+- Suggested skills or workflows for the next session
+- Exact next steps
+
+Do not duplicate content already captured in PRDs, plans, ADRs, issues, commits, or diffs. Reference those artifacts by path or URL. Redact API keys, tokens, passwords, and personal information.
+
 ## Best Practices
 
-1. **Compact after planning** — Once plan is finalized in TodoWrite, compact to start fresh
+1. **Compact after planning** — Once the plan is finalized in the current plan or a file, compact to start fresh
 2. **Compact after debugging** — Clear error-resolution context before continuing
 3. **Don't compact mid-implementation** — Preserve context for related changes
 4. **Read the suggestion** — The hook tells you *when*, you decide *if*
@@ -109,15 +125,15 @@ Instead of loading full skill content at session start, use a trigger table that
 
 ### Context Composition Awareness
 Monitor what's consuming your context window:
-- **CLAUDE.md files** — Always loaded, keep lean
+- **AGENTS.md files** — Always loaded, keep lean
 - **Loaded skills** — Each skill adds 1-5K tokens
 - **Conversation history** — Grows with each exchange
 - **Tool results** — File reads, search results add bulk
 
 ### Duplicate Instruction Detection
 Common sources of duplicate context:
-- Same rules in both `~/.claude/rules/` and project `.claude/rules/`
-- Skills that repeat CLAUDE.md instructions
+- Same rules repeated across `AGENTS.md`, skills, and project docs
+- Skills that repeat AGENTS.md instructions
 - Multiple skills covering overlapping domains
 
 ### Context Optimization Tools

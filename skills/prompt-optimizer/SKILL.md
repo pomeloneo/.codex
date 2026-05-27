@@ -27,7 +27,7 @@ and output a complete optimized prompt the user can paste and run.
 
 - User says "optimize this prompt", "improve my prompt", "rewrite this prompt"
 - User says "help me write a better prompt for..."
-- User says "what's the best way to ask Claude Code to..."
+- User says "what's the best way to ask Codex to..."
 - User says "优化prompt", "改进prompt", "怎么写prompt", "帮我优化这个指令"
 - User pastes a draft prompt and asks for feedback or enhancement
 - User says "I don't know how to prompt for this"
@@ -62,7 +62,7 @@ Run this 6-phase pipeline sequentially. Present results using the Output Format 
 
 Before analyzing the prompt, detect the current project context:
 
-1. Check if a `CLAUDE.md` exists in the working directory — read it for project conventions
+1. Check if an `AGENTS.md` exists in the working directory — read it for project conventions. If only another legacy project guidance file exists, read it as migrated guidance and prefer Codex wording in the optimized prompt.
 2. Detect tech stack from project files:
    - `package.json` → Node.js / TypeScript / React / Next.js
    - `go.mod` → Go
@@ -178,10 +178,10 @@ For MEDIUM+ tasks, always start with /plan. For EPIC tasks, use blueprint skill.
 
 | Scope | Recommended Model | Rationale |
 |-------|------------------|-----------|
-| TRIVIAL-LOW | Sonnet 4.6 | Fast, cost-efficient for simple tasks |
-| MEDIUM | Sonnet 4.6 | Best coding model for standard work |
-| HIGH | Sonnet 4.6 (main) + Opus 4.6 (planning) | Opus for architecture, Sonnet for implementation |
-| EPIC | Opus 4.6 (blueprint) + Sonnet 4.6 (execution) | Deep reasoning for multi-session planning |
+| TRIVIAL-LOW | Current default Codex coding model | Fast, cost-efficient for simple tasks |
+| MEDIUM | Current default Codex coding model | Suitable for standard implementation work |
+| HIGH | Higher-reasoning Codex model if available for planning, default model for execution | Use stronger reasoning for architecture and invariants |
+| EPIC | Highest-reasoning available Codex model for planning, default model for execution | Deep reasoning for multi-session planning |
 
 **Multi-prompt splitting** (for HIGH/EPIC scope):
 
@@ -189,7 +189,7 @@ For tasks that exceed a single session, split into sequential prompts:
 - Prompt 1: Research + Plan (use search-first skill, then /plan)
 - Prompt 2-N: Implement one phase per prompt (each ends with /verify)
 - Final Prompt: Integration test + /code-review across all phases
-- Use /save-session and /resume-session to preserve context between sessions
+- Save a handoff note or implementation plan between sessions so context can be resumed reliably
 
 ---
 
@@ -218,7 +218,7 @@ If Phase 0 auto-detected the answer, state it instead of asking.
 | Command | /plan | Plan architecture before coding |
 | Skill | tdd-workflow | TDD methodology guidance |
 | Agent | code-reviewer | Post-implementation review |
-| Model | Sonnet 4.6 | Recommended for this scope |
+| Model | Current default Codex coding model | Recommended for this scope |
 
 ### Section 3: Optimized Prompt — Full Version
 
@@ -267,7 +267,7 @@ A compact version for experienced ECC users. Vary by intent type:
 ### Trigger Examples
 
 - "Optimize this prompt for ECC"
-- "Rewrite this prompt so Claude Code uses the right commands"
+- "Rewrite this prompt so Codex uses the right workflow"
 - "帮我优化这个指令"
 - "How should I prompt ECC for this task?"
 
@@ -377,10 +377,10 @@ The blueprint should produce phases like:
 - Phase N: Decommission monolith
 
 Each phase = 1 PR, with /verify gates between phases.
-Use /save-session between phases. Use /resume-session to continue.
+Save a handoff note between phases so work can resume reliably.
 Use git worktrees for parallel service extraction when dependencies allow.
 
-Recommended: Opus 4.6 for blueprint planning, Sonnet 4.6 for phase execution.
+Recommended: highest-reasoning available Codex model for blueprint planning, default Codex coding model for phase execution.
 ```
 
 ---
