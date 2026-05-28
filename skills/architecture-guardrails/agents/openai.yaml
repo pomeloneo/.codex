@@ -1,0 +1,6 @@
+interface:
+  display_name: "Architecture Guardrails"
+  short_description: "Enforce frontend architecture fit"
+  default_prompt: "Use $architecture-guardrails to check architecture fit before planning this frontend change."
+policy:
+  allow_implicit_invocation: true
