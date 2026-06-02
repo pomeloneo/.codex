@@ -3,18 +3,23 @@
 This repository tracks the reusable, reviewable Codex configuration surfaces from
 `~/.codex`.
 
+The ignore policy is an explicit denylist rather than a blanket `*`, so new
+shareable surfaces show up in `git status` and can be reviewed before syncing.
+
 Tracked:
 
 - `AGENTS.md`
 - `agents/`
 - `agent-instructions/`
+- `pets/`
 - `prompts/`
 - `skills/`
 - `version.json`
 
 Intentionally excluded:
 
-- Authentication and local configuration: `auth.json`, `config.toml`
+- Authentication, local identity, and machine-specific configuration:
+  `auth.json`, `installation_id`, `config.toml`, `hooks.json`
 - Conversation and command history: `history.jsonl`, `sessions/`,
   `archived_sessions/`, `session_index.jsonl`, `shell_snapshots/`
 - Runtime state and logs: `*.sqlite*`, `log/`, `logs_*.sqlite*`,
