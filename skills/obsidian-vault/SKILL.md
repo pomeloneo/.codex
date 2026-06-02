@@ -40,13 +40,14 @@ For ordinary note content, the active profile usually does not matter. For confi
 
 ## Default Note Destinations
 
-- Repository/project exploration: `项目分析/<项目名> 项目探索.md`
+- User-owned project or product planning: `项目/<项目名>/`
+- Repository/codebase exploration: `代码库/<仓库名> 项目探索.md`
 - Business/domain learning reports: `业务学习/<业务名> 学习报告.md`
 - General durable knowledge: `知识沉淀/<主题>.md`
 - Daily or short-lived notes: `daily_record/`
 - Course archives: `lesson/` only when explicitly requested
 
-Legacy notes may exist under `personal/项目分析/`. Read them when relevant, but do not move them unless the user explicitly asks to reorganize.
+Legacy notes may exist under `项目分析/` or `personal/项目分析/`. Read them when relevant, but do not move them unless the user explicitly asks to reorganize.
 
 ## Safety Rules
 
@@ -97,9 +98,10 @@ When preserving an AI-agent conversation into Obsidian:
 When the user asks to "record this", "save this to Obsidian", "沉淀成笔记", or similar:
 
 1. Use an explicit target note or folder if the user provides one.
-2. Use `项目分析/` for repository, codebase, service, system, or project exploration.
-3. Use `业务学习/` for business, domain, industry, product, or process learning.
-4. Use `daily_record/` for same-day temporary notes, quick logs, or explicit daily notes.
-5. Use `知识沉淀/` for everything else that should be durable: methods, tool usage, troubleshooting lessons, AI-agent workflows, reusable decisions, thinking patterns, and general lessons learned.
+2. Use `项目/<项目名>/` for user-owned project planning, product ideas, PRDs, implementation plans, roadmaps, and ongoing project decision records.
+3. Use `代码库/` for repository, codebase, service, system, or source-tree exploration notes.
+4. Use `业务学习/` for business, domain, industry, product, or process learning.
+5. Use `daily_record/` for same-day temporary notes, quick logs, or explicit daily notes.
+6. Use `知识沉淀/` for everything else that should be durable: methods, tool usage, troubleshooting lessons, AI-agent workflows, reusable decisions, thinking patterns, and general lessons learned.
 
 Before creating a note in `知识沉淀/`, search for an existing related note and update it when that is more useful than creating another file.

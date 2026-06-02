@@ -39,13 +39,15 @@ python3 ~/.codex/skills/obsidian-vault/scripts/detect_vault_profile.py "/path/to
 
 Default writable note areas:
 
-- `项目分析/`: new repository, codebase, system, or project exploration notes.
+- `项目/`: user-owned project planning, product ideas, PRDs, implementation plans, roadmaps, and ongoing project decision records. Prefer `项目/<项目名>/` when a project has more than one note.
+- `代码库/`: repository, codebase, service, system, or source-tree exploration notes.
 - `业务学习/`: business/domain learning reports and synthesized business context.
-- `知识沉淀/`: durable knowledge that does not naturally belong to project analysis, business learning, or daily notes.
+- `知识沉淀/`: durable knowledge that does not naturally belong to project planning, codebase exploration, business learning, or daily notes.
 - `daily_record/`: daily notes and short-lived captures.
 
 Context areas:
 
+- `项目分析/`: legacy project analysis notes. Read when relevant; migrate only when explicitly requested.
 - `personal/项目分析/`: legacy project analysis notes. Read when relevant; do not move by default.
 - `personal/`: personal long-term notes. Search when the user asks for personal habits, preferences, history, or prior thinking.
 
@@ -59,11 +61,12 @@ Normally excluded:
 ## Path Choice Rules
 
 - Do not add a `personal/` prefix for new project or business notes.
-- Use top-level `项目分析/` for project exploration by default.
+- Use `项目/<项目名>/` for user-owned project planning, product ideas, PRDs, implementation plans, roadmaps, and ongoing project decision records.
+- Use top-level `代码库/` for repository, codebase, service, system, or source-tree exploration by default.
 - Use top-level `业务学习/` for business learning by default.
 - Use top-level `知识沉淀/` for general reusable knowledge, methods, tool usage, troubleshooting lessons, AI-agent workflow notes, and durable conclusions that do not belong elsewhere.
-- If an older related note exists under `personal/项目分析/`, read it for context and link to it rather than moving it automatically.
-- Ask before creating a new top-level directory other than `项目分析/`, `业务学习/`, or `知识沉淀/`.
+- If an older related note exists under `项目分析/` or `personal/项目分析/`, read it for context and link to it rather than moving it automatically unless the user asks to reorganize.
+- Ask before creating a new top-level directory other than `项目/`, `代码库/`, `业务学习/`, or `知识沉淀/`.
 
 ## Search Commands
 

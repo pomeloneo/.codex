@@ -2,26 +2,31 @@
 
 Use these workflows to turn AI-agent work into durable Obsidian notes.
 
-## Repository Or Project Exploration
+## Project Planning
 
-Use when the user is exploring a new code repository, system, service, product area, or technical project with repeated agent Q&A.
+Use when the user is shaping a user-owned project, product idea, app, tool, PRD, implementation plan, roadmap, architecture proposal, or ongoing project decision record.
 
 Default note:
 
-`项目分析/<项目名> 项目探索.md`
+`项目/<项目名>/<项目名> 项目探索.md`
 
 Process:
 
 1. Identify the project name from the repo directory, service name, or user's wording.
 2. Search for existing notes:
+   - `项目/<项目名>/*`
+   - `项目/<项目名>*`
    - `项目分析/<项目名>*`
    - `personal/项目分析/<项目名>*`
    - content mentions of the project name
-3. If a relevant note exists, update it. If not, create the default note.
+3. If a relevant note exists, update it. If not, create the default note under `项目/<项目名>/`.
 4. During exploration, capture only durable findings:
    - key Q&A
    - architecture facts
    - business/domain concepts
+   - product decisions
+   - PRD scope
+   - implementation plans
    - code entry points and important files
    - data flow, control flow, dependencies
    - confirmed decisions
@@ -36,6 +41,26 @@ Good capture unit:
 - Evidence/source
 - Implication
 - Open follow-up
+
+## Repository Or Codebase Exploration
+
+Use when the user is exploring an existing repository, source tree, service implementation, system internals, or codebase behavior.
+
+Default note:
+
+`代码库/<仓库名> 项目探索.md`
+
+Process:
+
+1. Identify the repository or service name from the working directory, remote URL, or user wording.
+2. Search for existing notes:
+   - `代码库/<仓库名>*`
+   - `项目分析/<仓库名>*`
+   - `personal/项目分析/<仓库名>*`
+   - content mentions of the repository or service name
+3. If a relevant note exists, update it. If not, create the default note under `代码库/`.
+4. Capture repository-specific facts: entry points, module boundaries, control flow, data flow, tests, commands, dependencies, risks, and open questions.
+5. Do not place product planning, PRDs, or implementation roadmaps under `代码库/` unless they are tightly tied to the existing repository.
 
 ## Business Or Domain Learning
 
@@ -99,7 +124,7 @@ Examples:
 Process:
 
 1. Infer a short durable topic name from the conversation.
-2. Search existing notes in `知识沉淀/`, `项目分析/`, `业务学习/`, `daily_record/`, and `personal/` for that topic.
+2. Search existing notes in `知识沉淀/`, `项目/`, `代码库/`, `项目分析/`, `业务学习/`, `daily_record/`, and `personal/` for that topic.
 3. Update an existing note if the new knowledge belongs there.
 4. Otherwise create `知识沉淀/<主题>.md`.
 5. Capture the reusable insight, not the whole conversation.
@@ -121,7 +146,7 @@ Use when the user asks Codex to infer preferences, habits, prior decisions, or h
 
 Default search scope:
 
-- Include: `项目分析/`, `业务学习/`, `知识沉淀/`, `daily_record/`, `personal/`
+- Include: `项目/`, `代码库/`, `项目分析/`, `业务学习/`, `知识沉淀/`, `daily_record/`, `personal/`
 - Exclude unless explicit: `lesson/`, `awesome-codex-skills/`, `.obsidian*/`, `.trash/`
 
 Process:
@@ -144,6 +169,6 @@ Use when the user asks to organize, merge, index, or clean up notes.
 Rules:
 
 - Propose a plan before bulk edits.
-- Do not move legacy notes from `personal/项目分析/` unless explicitly asked.
+- Do not move legacy notes from `项目分析/` or `personal/项目分析/` unless explicitly asked.
 - Prefer small index/MOC notes over duplicating content.
 - When renaming or moving notes, update wikilinks and report changed files.
