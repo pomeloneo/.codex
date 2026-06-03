@@ -1,10 +1,10 @@
 version = 1
 id = "sync-codex-config-to-github"
 kind = "heartbeat"
-name = "Sync Codex config to GitHub"
-prompt = "Synchronize the local Codex configuration Git repository at /Users/bytedance/.codex to its configured origin. Run the sync conservatively: verify it is a Git repository, inspect status, stage all non-ignored changes with git add -A, commit only if there are staged changes using the message \"Auto-sync Codex config\", pull/rebase from origin/main if needed, then push main to origin. Respect the repository's existing .gitignore and do not force-add ignored credentials, local state, history, logs, caches, or database files. Do not print secret file contents or credential values. Report whether a commit was created, whether push succeeded, and any actionable failure."
+name = "Sync Codex and Obsidian to GitHub"
+prompt = "Synchronize two local Git repositories to their configured origins.\n\n1. Synchronize the local Codex configuration Git repository at /Users/bytedance/.codex conservatively: verify it is a Git repository, inspect status, stage all non-ignored changes with git add -A, commit only if there are staged changes using the message \"Auto-sync Codex config\", pull/rebase from origin/main if needed, then push main to origin. Respect the repository's existing .gitignore and do not force-add ignored credentials, local state, history, logs, caches, or database files. Do not print secret file contents or credential values.\n\n2. Synchronize the Obsidian Vault Git repository at /Users/bytedance/Documents/Obsidian Vault to its configured origin. Treat this as a full-content sync: include hidden files and all files under the vault that Git can track, and after git add -A also force-stage any ignored untracked files reported by git ls-files -o -i --exclude-standard, while never trying to add the .git directory itself. Do not read or print note contents, secrets, or credential values. Verify it is a Git repository, inspect status, stage all changes and deletions, commit only if there are staged changes using the message \"Auto-sync Obsidian Vault\", pull/rebase from origin/main if needed, then push main to origin.\n\nReport for each repository whether a commit was created, whether push succeeded, and any actionable failure such as merge conflicts, auth failure, or files too large for GitHub."
 status = "ACTIVE"
-rrule = "FREQ=MINUTELY;INTERVAL=30"
+rrule = "FREQ=MINUTELY;INTERVAL=20"
 target_thread_id = "019e8b92-2124-7c61-816b-4960e356232b"
 created_at = 1780458336784
-updated_at = 1780458336784
+updated_at = 1780458656375
