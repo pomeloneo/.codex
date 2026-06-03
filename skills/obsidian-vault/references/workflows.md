@@ -2,6 +2,19 @@
 
 Use these workflows to turn AI-agent work into durable Obsidian notes.
 
+## Flow-Oriented Content
+
+Use when any Obsidian capture includes process, workflow, decision path, lifecycle, control flow, data flow, user journey, routing, fallback, or multi-step system/business interaction content.
+
+Process:
+
+1. Read `diagram-pairs.md`.
+2. Identify the exact note section or Q&A block that describes the flow.
+3. Add an inline Mermaid diagram directly below that section or block.
+4. Create or update the companion Obsidian Canvas `.canvas` file in the same folder as the target note unless an existing local convention says otherwise.
+5. Add a Canvas wikilink immediately below the Mermaid diagram.
+6. When editing an existing flow, update the prose, Mermaid, and Canvas together so they stay consistent.
+
 ## Project Planning
 
 Use when the user is shaping a user-owned project, product idea, app, tool, PRD, implementation plan, roadmap, architecture proposal, or ongoing project decision record.
@@ -31,8 +44,9 @@ Process:
    - data flow, control flow, dependencies
    - confirmed decisions
    - assumptions and open questions
-5. Keep raw chat out of the note unless the user explicitly asks for transcript preservation.
-6. Link related notes with `[[wikilinks]]` when they already exist or are likely to become durable concepts.
+5. For any implementation plan, business process, data flow, control flow, dependency path, or lifecycle, apply the Flow-Oriented Content workflow.
+6. Keep raw chat out of the note unless the user explicitly asks for transcript preservation.
+7. Link related notes with `[[wikilinks]]` when they already exist or are likely to become durable concepts.
 
 Good capture unit:
 
@@ -60,7 +74,8 @@ Process:
    - content mentions of the repository or service name
 3. If a relevant note exists, update it. If not, create the default note under `代码库/`.
 4. Capture repository-specific facts: entry points, module boundaries, control flow, data flow, tests, commands, dependencies, risks, and open questions.
-5. Do not place product planning, PRDs, or implementation roadmaps under `代码库/` unless they are tightly tied to the existing repository.
+5. For control flow, data flow, service interaction, request lifecycle, build pipeline, or dependency chain findings, apply the Flow-Oriented Content workflow.
+6. Do not place product planning, PRDs, or implementation roadmaps under `代码库/` unless they are tightly tied to the existing repository.
 
 ## Business Or Domain Learning
 
@@ -81,8 +96,9 @@ Process:
    - system/data architecture if relevant
    - risks, edge cases, and unresolved questions
 4. Write the final report as a standalone note, not as a transcript.
-5. Add a `关键问答` section for questions that changed understanding.
-6. Add `后续问题` for unresolved or high-value follow-ups.
+5. For business process, role handoff, customer journey, data path, or operating model content, apply the Flow-Oriented Content workflow.
+6. Add a `关键问答` section for questions that changed understanding.
+7. Add `后续问题` for unresolved or high-value follow-ups.
 
 Do not search `lesson/` unless the user explicitly says to use course or learning materials.
 
@@ -95,8 +111,9 @@ Process:
 1. Establish or create the target note.
 2. Keep a running `关键问答` section.
 3. Append durable facts under the relevant conceptual section instead of appending chronological chat.
-4. Mark uncertain claims as assumptions.
-5. At milestones, compact the note:
+4. When a captured answer describes a process or flow, apply the Flow-Oriented Content workflow under that answer or the relevant conceptual section.
+5. Mark uncertain claims as assumptions.
+6. At milestones, compact the note:
    - merge duplicate Q&A
    - move facts into architecture/business sections
    - keep open questions visible
@@ -129,7 +146,8 @@ Process:
 4. Otherwise create `知识沉淀/<主题>.md`.
 5. Capture the reusable insight, not the whole conversation.
 6. Include evidence, examples, and "when to use" guidance when helpful.
-7. Link related notes if they already exist.
+7. Apply the Flow-Oriented Content workflow when the reusable knowledge is procedural, sequential, branching, or lifecycle-based.
+8. Link related notes if they already exist.
 
 Use this route for prompts like:
 
