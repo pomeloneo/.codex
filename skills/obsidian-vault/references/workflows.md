@@ -8,12 +8,11 @@ Use when any Obsidian capture includes process, workflow, decision path, lifecyc
 
 Process:
 
-1. Read `diagram-pairs.md`.
+1. Read `canvas-diagrams.md`.
 2. Identify the exact note section or Q&A block that describes the flow.
-3. Add an inline Mermaid diagram directly below that section or block.
-4. Create or update the companion Obsidian Canvas `.canvas` file in the same folder as the target note unless an existing local convention says otherwise.
-5. Add a Canvas wikilink immediately below the Mermaid diagram.
-6. When editing an existing flow, update the prose, Mermaid, and Canvas together so they stay consistent.
+3. Create or update the companion Obsidian Canvas `.canvas` file in the same folder as the target note unless an existing local convention says otherwise.
+4. Add a Canvas wikilink immediately below that section or block.
+5. When editing an existing flow, update the prose and Canvas together so they stay consistent.
 
 ## Project Planning
 

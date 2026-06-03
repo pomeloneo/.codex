@@ -2,24 +2,13 @@
 
 Use these templates as starting points. Preserve the style of an existing target note when updating one.
 
-## Flow Diagram Pair
+## Canvas Diagram Link
 
 Use directly below the relevant process, workflow, data-flow, control-flow, lifecycle, journey, or Q&A content.
 
-````markdown
-### <流程名>图示
-
-```mermaid
-flowchart TD
-    accTitle: <Short flow title>
-    accDescr: <One-line description of the process and key branch>
-
-    start[开始] --> step[关键步骤]
-    step --> done[完成]
-```
-
+```markdown
 Canvas：[[<relative-vault-path>/<流程名>.canvas|打开 <流程名> Canvas]]
-````
+```
 
 ## Project Exploration
 
@@ -63,7 +52,7 @@ updated: <YYYY-MM-DD>
 
 - 
 
-<如本节包含流程、分支、数据流或生命周期，在此处下方插入 `Flow Diagram Pair`；生成实际笔记时删除此占位行。>
+<如本节包含流程、分支、数据流或生命周期，在此处下方插入 `Canvas Diagram Link`；生成实际笔记时删除此占位行。>
 
 ### 关键依赖
 
@@ -116,7 +105,7 @@ updated: <YYYY-MM-DD>
 
 1. 
 
-<如本节包含业务流程、角色交接、分支或用户旅程，在此处下方插入 `Flow Diagram Pair`；生成实际笔记时删除此占位行。>
+<如本节包含业务流程、角色交接、分支或用户旅程，在此处下方插入 `Canvas Diagram Link`；生成实际笔记时删除此占位行。>
 
 ## 角色与系统
 
@@ -192,7 +181,7 @@ updated: <YYYY-MM-DD>
 
 ## 示例
 
-<如果示例描述流程、步骤、分支或生命周期，在对应示例下方插入 `Flow Diagram Pair`；生成实际笔记时删除此占位行。>
+<如果示例描述流程、步骤、分支或生命周期，在对应示例下方插入 `Canvas Diagram Link`；生成实际笔记时删除此占位行。>
 
 ## 证据与来源
 

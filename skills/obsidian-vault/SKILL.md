@@ -1,6 +1,6 @@
 ---
 name: obsidian-vault
-description: Search, capture, edit, diagram, and organize the user's Obsidian knowledge base across work and personal machines. Use when the user asks Codex to record useful conversation findings into Obsidian, preserve project/repository exploration notes, create business-learning reports, capture general durable knowledge, save key Q&A, visualize process or workflow content with Mermaid plus Obsidian Canvas, search the user's personal note context, maintain wikilinks/backlinks/index notes, or make explicit Obsidian vault/config changes.
+description: Search, capture, edit, diagram, and organize the user's Obsidian knowledge base across work and personal machines. Use when the user asks Codex to record useful conversation findings into Obsidian, preserve project/repository exploration notes, create business-learning reports, capture general durable knowledge, save key Q&A, visualize process or workflow content with Obsidian Canvas, search the user's personal note context, maintain wikilinks/backlinks/index notes, or make explicit Obsidian vault/config changes.
 ---
 
 # Obsidian Vault
@@ -12,8 +12,8 @@ Use this skill to work with the user's Obsidian vault as a personal knowledge sy
 - Preserve useful knowledge from AI-agent conversations as structured notes, not raw transcripts.
 - Prefer durable information: conclusions, key Q&A, architecture/business understanding, decisions, evidence, open questions, and next actions.
 - Use existing notes and folders when they fit. Do not create taxonomy for its own sake.
-- When note content includes a process, workflow, decision path, lifecycle, control flow, data flow, user journey, or multi-step business/system interaction, represent it twice: an inline Mermaid diagram and a linked Obsidian Canvas file.
-- Place the Mermaid diagram and Canvas link directly below the relevant section, list, table, or Q&A block rather than collecting all diagrams at the end.
+- When note content includes a process, workflow, decision path, lifecycle, control flow, data flow, user journey, or multi-step business/system interaction, represent it with a linked Obsidian Canvas file.
+- Place the Canvas link directly below the relevant section, list, table, or Q&A block rather than collecting all diagram links at the end.
 - Do not put new notes under `personal/` by default.
 - Do not search `lesson/` by default. Only include course/learning material when the user explicitly asks to search courses, lessons, or learning content.
 - Do not modify Obsidian config/profile directories unless the user explicitly asks for plugin, theme, hotkey, workspace, or app configuration changes.
@@ -22,7 +22,7 @@ Use this skill to work with the user's Obsidian vault as a personal knowledge sy
 
 - Read `references/vault-map.md` before choosing paths, detecting profiles, or changing Obsidian config.
 - Read `references/workflows.md` before capturing project exploration, business learning, Q&A, or personal-context lookup.
-- Read `references/diagram-pairs.md` before creating or updating process, workflow, data-flow, control-flow, lifecycle, or journey content.
+- Read `references/canvas-diagrams.md` before creating or updating process, workflow, data-flow, control-flow, lifecycle, or journey content.
 - Read `references/templates.md` before creating a substantial new note or report.
 
 Use `scripts/detect_vault_profile.py` when the current vault root or active profile is unclear.

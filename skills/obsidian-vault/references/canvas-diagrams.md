@@ -1,67 +1,46 @@
-# Obsidian Diagram Pairs
+# Obsidian Canvas Diagrams
 
 Use this reference whenever Obsidian note content describes a process-like structure.
 
 ## Trigger
 
-Create or update a diagram pair when the target note includes any of these:
+Create or update a Canvas diagram when the target note includes any of these:
 
 - Process, workflow, operating procedure, implementation plan, or business flow
 - Decision tree, branching path, routing logic, fallback path, or escalation flow
 - Control flow, data flow, request flow, event flow, dependency chain, or pipeline
 - Entity lifecycle, state transition, user journey, handoff, or multi-actor interaction
 
-Do not wait for the user to explicitly ask for a diagram. If the `obsidian-vault` skill is being used and the durable content is flow-oriented, diagrams are part of the capture.
+Do not wait for the user to explicitly ask for a diagram. If the `obsidian-vault` skill is being used and the durable content is flow-oriented, a Canvas diagram is part of the capture.
 
-## Required Pair
+For this skill, Canvas is the only diagram format to add. If an existing redundant text diagram block only duplicates the process visualization, replace it with the Canvas link when editing that section. Preserve unrelated legacy diagram blocks unless the user asks to rewrite them.
 
-For each important flow-oriented section, create both:
+## Required Output
 
-1. Inline Mermaid in the Markdown note.
-2. A linked Obsidian Canvas `.canvas` file.
+For each important flow-oriented section:
 
-The Mermaid diagram is the compact, text-native source of truth. The Canvas file is the spatial companion for visual scanning in Obsidian.
+1. Create or update a linked Obsidian Canvas `.canvas` file.
+2. Add a Canvas wikilink in the Markdown note.
+
+The Canvas file is the visual representation. The Markdown note keeps the explanation, evidence, caveats, and the link to open the visual canvas.
 
 ## Placement
 
-Place the pair directly below the content it explains:
+Place the Canvas link directly below the content it explains:
 
 - Under `核心流程`, `业务流程`, `数据流`, `控制流`, `生命周期`, or similar headings.
 - Under the exact Q&A block when the answer describes a flow.
 - Under the relevant paragraph/list/table if the note has no dedicated flow heading.
 
-Do not put all diagrams in a generic appendix unless the user asks for an appendix.
+Do not put all Canvas links in a generic appendix unless the user asks for an appendix.
 
 Use this note block shape:
 
-````markdown
-### <流程名>图示
-
-```mermaid
-flowchart TD
-    accTitle: <Short flow title>
-    accDescr: <One-line description of the process and key branch>
-
-    start[开始] --> step[关键步骤]
-    step --> done[完成]
+```markdown
+Canvas：[[<relative-vault-path>/<流程名>.canvas|打开 <流程名> Canvas]]
 ```
 
-Canvas：[[<relative-vault-path>/<流程名>.canvas|打开 <流程名> Canvas]]
-````
-
 If the surrounding note uses English headings or link labels, match that style.
-
-## Mermaid Rules
-
-- Before writing Mermaid, use the `markdown-mermaid-writing` skill when available; at minimum follow `skills/markdown-mermaid-writing/references/mermaid_style_guide.md`.
-- Pick the most specific Mermaid type:
-  - Process, branch, routing, fallback, pipeline: `flowchart`
-  - Multi-actor calls or message timing: `sequenceDiagram`
-  - Lifecycle/status transitions: `stateDiagram-v2`
-  - Time-bound plan or delivery schedule: `gantt` or `timeline`
-  - User experience stages: `journey`
-- Include accessibility text where the Mermaid type supports it: `accTitle` and one-line `accDescr`.
-- Keep node labels short. Put detailed evidence, field names, and caveats in the note text or Canvas node body, not in every Mermaid edge.
 
 ## Canvas File Rules
 
@@ -137,8 +116,8 @@ Minimal Canvas shape:
 
 ## Update Rules
 
-- Update Mermaid and Canvas together. Never leave one stale when changing the flow explanation.
-- If a note already has a correct Mermaid diagram but no Canvas link, add the Canvas file and link.
-- If a note already links a correct Canvas but has no Mermaid diagram, add Mermaid below the relevant section and keep the existing link.
-- If the flow is too large, create one overview pair at the main section and one detail pair under the most important branch. Link the detail Canvas from the overview section.
+- Update the prose and Canvas together. Never leave the Canvas stale when changing the flow explanation.
+- If a note already has a correct Canvas link, update the existing Canvas instead of creating another file.
+- If a note has flow prose but no Canvas link, add the Canvas file and link below the relevant section.
+- If the flow is too large, create one overview Canvas at the main section and one detail Canvas under the most important branch. Link the detail Canvas from the overview section.
 - Report both changed files: the Markdown note and each `.canvas` companion.
