@@ -18,6 +18,17 @@ Use this skill to work with the user's Obsidian vault as a personal knowledge sy
 - Do not search `lesson/` by default. Only include course/learning material when the user explicitly asks to search courses, lessons, or learning content.
 - Do not modify Obsidian config/profile directories unless the user explicitly asks for plugin, theme, hotkey, workspace, or app configuration changes.
 
+## Obsidian-Native Note Style
+
+- Write notes as durable knowledge pages, not dense exported reports.
+- Prefer a clean reading path: title, short summary callout, related links, core conclusions, evidence, caveats, and quick index.
+- Use short paragraphs, focused sections, wikilinks, and Obsidian callouts such as `[!summary]`, `[!tip]`, `[!warning]`, `[!quote]-`, and `[!example]`.
+- Put long evidence, command output, large code-reference lists, or caveats in collapsible callouts when possible.
+- Avoid huge tables and wall-of-text sections. Split large comparisons into small cards, short tables, or named evidence blocks.
+- Keep visual clutter low: avoid decorative filler, repeated headings, and redundant diagram links.
+- Preserve source paths, code references, and evidence, but present them in a way that is easy to scan.
+- If the user explicitly asks for Mermaid diagrams in Markdown, use Mermaid for that note or section. Otherwise follow the Canvas-first flow diagram rule.
+
 ## Load References
 
 - Read `references/vault-map.md` before choosing paths, detecting profiles, or changing Obsidian config.

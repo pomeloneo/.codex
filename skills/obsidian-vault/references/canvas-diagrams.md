@@ -13,7 +13,7 @@ Create or update a Canvas diagram when the target note includes any of these:
 
 Do not wait for the user to explicitly ask for a diagram. If the `obsidian-vault` skill is being used and the durable content is flow-oriented, a Canvas diagram is part of the capture.
 
-For this skill, Canvas is the only diagram format to add. If an existing redundant text diagram block only duplicates the process visualization, replace it with the Canvas link when editing that section. Preserve unrelated legacy diagram blocks unless the user asks to rewrite them.
+For this skill, Canvas is the default diagram format to add. If the user explicitly asks for Mermaid diagrams inside the Markdown note, Mermaid is allowed for that note or section. If an existing redundant text diagram block only duplicates the process visualization, replace it with the Canvas link when editing that section unless the user explicitly requested Mermaid. Preserve unrelated legacy diagram blocks unless the user asks to rewrite them.
 
 ## Required Output
 

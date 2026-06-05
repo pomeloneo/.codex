@@ -2,6 +2,20 @@
 
 Use these workflows to turn AI-agent work into durable Obsidian notes.
 
+## Presentation Pass
+
+Before finishing any substantial note, do a short Obsidian readability pass:
+
+1. Put a concise summary callout near the top.
+2. Add related wikilinks or Canvas/Mermaid links close to the sections they support.
+3. Split dense analysis into short sections with clear headings.
+4. Convert long evidence dumps into collapsible `[!quote]-` or `[!info]-` callouts.
+5. Avoid giant tables unless they are genuinely the clearest format; split broad comparisons into smaller sections.
+6. Keep conclusions, evidence, caveats, and open questions visually distinct.
+7. Preserve all important source paths and code references.
+
+The result should feel like an Obsidian knowledge page: concise, structured, skimmable, and pleasant to reopen later.
+
 ## Flow-Oriented Content
 
 Use when any Obsidian capture includes process, workflow, decision path, lifecycle, control flow, data flow, user journey, routing, fallback, or multi-step system/business interaction content.
@@ -75,6 +89,7 @@ Process:
 4. Capture repository-specific facts: entry points, module boundaries, control flow, data flow, tests, commands, dependencies, risks, and open questions.
 5. For control flow, data flow, service interaction, request lifecycle, build pipeline, or dependency chain findings, apply the Flow-Oriented Content workflow.
 6. Do not place product planning, PRDs, or implementation roadmaps under `代码库/` unless they are tightly tied to the existing repository.
+7. Run the Presentation Pass before finishing: prefer summary callouts, compact architecture cards, collapsible evidence, and a quick file index over raw long-form analysis.
 
 ## Business Or Domain Learning
 

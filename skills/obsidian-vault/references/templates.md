@@ -10,6 +10,36 @@ Use directly below the relevant process, workflow, data-flow, control-flow, life
 Canvas：[[<relative-vault-path>/<流程名>.canvas|打开 <流程名> Canvas]]
 ```
 
+## Obsidian-Native Style Blocks
+
+Use these blocks to make substantial notes easier to scan. Do not force every block into every note; choose the ones that match the content.
+
+```markdown
+> [!summary] 一句话结论
+> 
+
+相关笔记：
+
+- [[ ]]
+
+> [!tip] 阅读路径
+> 
+
+> [!warning] 注意
+> 
+
+> [!quote]- 代码证据
+> - `<path>:<line>`：
+```
+
+For long codebase notes:
+
+- Put the durable conclusion before evidence.
+- Prefer short evidence lists over giant tables.
+- Use collapsible `[!quote]-` blocks for dense file references.
+- Keep tables small; split broad comparisons into sections when they exceed about 8 rows.
+- Add a quick index near the end for important entry files.
+
 ## Project Exploration
 
 ```markdown
@@ -22,25 +52,33 @@ updated: <YYYY-MM-DD>
 
 # <项目名> 项目探索
 
-## 探索目标
+> [!summary] 一句话结论
+> 
+
+仓库：`<path>`
+
+相关笔记：
 
 - 
 
-## 当前结论
+## 图谱
 
 - 
 
-## 关键问答
+## 核心结论
 
-### Q: 
+> [!abstract] 真实架构
+> - 
 
-**结论**：
+> [!warning] 注意事项
+> - 
 
-**证据**：
+## 代码证据地图
 
-**影响**：
+### <主题>
 
-**待验证**：
+> [!quote]- 证据
+> - `<path>:<line>`：
 
 ## 技术架构
 
