@@ -39,6 +39,27 @@ For long codebase notes:
 - Use collapsible `[!quote]-` blocks for dense file references.
 - Keep tables small; split broad comparisons into sections when they exceed about 8 rows.
 - Add a quick index near the end for important entry files.
+- Do not write dense callout paragraphs that contain many files, examples, rules, and exceptions.
+- When a callout needs to explain several peer items, use this structure:
+
+```markdown
+> [!note] <主题>
+> 一句话说明。
+>
+> 现状：
+>
+> - `<file-a>`
+> - `<file-b>`
+>
+> 建议：
+>
+> - <建议一>
+> - <建议二>
+>
+> 注意：
+>
+> - <例外或风险>
+```
 
 ## Project Exploration
 

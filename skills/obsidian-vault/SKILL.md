@@ -25,6 +25,9 @@ Use this skill to work with the user's Obsidian vault as a personal knowledge sy
 - Use short paragraphs, focused sections, wikilinks, and Obsidian callouts such as `[!summary]`, `[!tip]`, `[!warning]`, `[!quote]-`, and `[!example]`.
 - Put long evidence, command output, large code-reference lists, or caveats in collapsible callouts when possible.
 - Avoid huge tables and wall-of-text sections. Split large comparisons into small cards, short tables, or named evidence blocks.
+- Never put several file names, rules, examples, exceptions, and recommendations into one dense callout paragraph. Use a short lead sentence followed by a bullet list.
+- If a paragraph or callout contains three or more peer ideas, file paths, conditions, examples, or decisions, split it into a list or small subsections.
+- In callouts, prefer this shape: one-line conclusion, blank callout line, then bullets grouped by purpose such as `现状`、`建议`、`例子`、`注意`.
 - Keep visual clutter low: avoid decorative filler, repeated headings, and redundant diagram links.
 - Preserve source paths, code references, and evidence, but present them in a way that is easy to scan.
 - If the user explicitly asks for Mermaid diagrams in Markdown, use Mermaid for that note or section. Otherwise follow the Canvas-first flow diagram rule.
