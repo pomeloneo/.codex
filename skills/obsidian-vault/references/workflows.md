@@ -11,8 +11,9 @@ Before finishing any substantial note, do a short Obsidian readability pass:
 3. Split dense analysis into short sections with clear headings.
 4. Convert long evidence dumps into collapsible `[!quote]-` or `[!info]-` callouts.
 5. Avoid giant tables unless they are genuinely the clearest format; split broad comparisons into smaller sections.
-6. Keep conclusions, evidence, caveats, and open questions visually distinct.
-7. Preserve all important source paths and code references.
+6. Split oversized callout paragraphs into a short lead sentence plus grouped bullets such as `现状`、`建议`、`例子`、`注意`.
+7. Keep conclusions, evidence, caveats, and open questions visually distinct.
+8. Preserve all important source paths and code references.
 
 The result should feel like an Obsidian knowledge page: concise, structured, skimmable, and pleasant to reopen later.
 
