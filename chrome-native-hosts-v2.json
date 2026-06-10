@@ -4,10 +4,10 @@
     {
       "schemaVersion": 2,
       "appServerProtocolVersion": 2,
-      "appVersion": "26.602.71036",
+      "appVersion": "26.608.12217",
       "channel": "prod",
-      "cliVersion": "26.602.71036",
-      "entryId": "codex-runtime-6c885796d76705e9a5ced0fec762873b",
+      "cliVersion": "26.608.12217",
+      "entryId": "codex-runtime-843556b9ffd64d9767e6c76e0a829d40",
       "extensionBuildChannels": [
         "prod"
       ],
@@ -19,24 +19,27 @@
         "com.openai.codexextension"
       ],
       "nativeHostProtocolVersion": 2,
-      "nativeHostVersion": "26.602.71036",
+      "nativeHostVersion": "26.608.12217",
       "paths": {
         "browserClientPath": "/Users/bytedance/.codex/plugins/cache/openai-bundled/chrome/latest/scripts/browser-client.mjs",
         "codexCliPath": "/Applications/Codex.app/Contents/Resources/codex",
         "codexHome": "/Users/bytedance/.codex",
         "extensionHostPath": "/Users/bytedance/.codex/plugins/cache/openai-bundled/chrome/latest/extension-host/macos/arm64/extension-host",
-        "nodePath": "/Applications/Codex.app/Contents/Resources/node",
-        "nodeReplPath": "/Applications/Codex.app/Contents/Resources/node_repl",
+        "nodePath": "/Applications/Codex.app/Contents/Resources/cua_node/bin/node",
+        "nodeModuleDirs": [
+          "/Applications/Codex.app/Contents/Resources/cua_node/lib/node_modules"
+        ],
+        "nodeReplPath": "/Applications/Codex.app/Contents/Resources/cua_node/bin/node_repl",
         "resourcesPath": "/Applications/Codex.app/Contents/Resources"
       },
       "presence": {
-        "lastSeenAt": "2026-06-09T02:39:10.586Z",
-        "pid": 26995,
-        "startedAt": "2026-06-09T02:39:10.586Z"
+        "lastSeenAt": "2026-06-10T03:43:57.301Z",
+        "pid": 47058,
+        "startedAt": "2026-06-10T03:43:57.301Z"
       },
       "proxyHost": "127.0.0.1",
       "proxyPort": 0,
-      "updatedAt": "2026-06-09T02:39:10.586Z"
+      "updatedAt": "2026-06-10T03:43:57.301Z"
     }
   ]
 }
