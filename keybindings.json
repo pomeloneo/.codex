@@ -1,6 +1,10 @@
 [
   {
+    "command": "composer.submit",
+    "key": "Command+Enter"
+  },
+  {
     "command": "globalDictationToggle",
-    "key": "Fn"
+    "key": null
   }
 ]
